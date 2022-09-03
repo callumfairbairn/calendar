@@ -1,4 +1,6 @@
 import useSWR from "swr";
+import { DayView } from "./components/DayView";
+import { Hour } from "./components/Hour";
 
 const fetcher = (query: string) =>
   fetch("/api/graphql", {
@@ -23,16 +25,23 @@ export default function Index() {
   const { events } = data;
 
   return (
-    <div>
-      {events.map((event) => (
-        <>
-          <div>{event.title}</div>
-          <div>
-            {event.start} - {event.end}
-          </div>
-          <hr />
-        </>
-      ))}
+    <div className="p-4">
+      <DayView>
+        <Hour>07:00</Hour>
+        <Hour>08:00</Hour>
+        <Hour>09:00</Hour>
+        <Hour>10:00</Hour>
+        <Hour>11:00</Hour>
+        <Hour>12:00</Hour>
+        <Hour>13:00</Hour>
+        <Hour>14:00</Hour>
+        <Hour>15:00</Hour>
+        <Hour>16:00</Hour>
+        <Hour>17:00</Hour>
+        <Hour>18:00</Hour>
+        <Hour>19:00</Hour>
+        <Hour>20:00</Hour>
+      </DayView>
     </div>
   );
 }
