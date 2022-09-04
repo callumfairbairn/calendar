@@ -3,7 +3,7 @@ interface HourProps {
 }
 
 export const Hour = ({ children }: HourProps) => {
-  return <div className="grid grid-cols-12 gap-2 py-1">
+  return <div className="grid grid-cols-12 gap-2 py-2 -z-1">
     <div className="col-span-1 text-right">
       {children}
     </div>
