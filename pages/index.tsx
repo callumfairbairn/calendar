@@ -26,7 +26,7 @@ export default function Index() {
 
   return (
     <div className="p-4">
-      <div className="p-2 max-w-xl bg-zinc-100 relative">
+      <div className="p-2 max-w-2xl bg-zinc-100 relative">
         <Events events={events} />
         <Hour>07:00</Hour>
         <Hour>08:00</Hour>
